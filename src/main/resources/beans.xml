@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="dieselEngine" class="com.example.spring04032024.DieselEngine">
+    </bean>
+    <bean name="petrol" class="com.example.spring04032024.PetrolEngine"></bean>
+
+    <bean name="X1" class="com.example.spring04032024.BMW">
+        <constructor-arg name="hp" value="550"></constructor-arg>
+        <constructor-arg name="engine" ref="dieselEngine"></constructor-arg>
+    </bean>
+    <bean name="X2" class="com.example.spring04032024.BMW">
+        <constructor-arg name="hp" value="550"></constructor-arg>
+        <constructor-arg name="engine" ref="dieselEngine"></constructor-arg>
+    </bean>
+    <bean name="X3" class="com.example.spring04032024.BMW">
+        <constructor-arg name="hp" value="550"></constructor-arg>
+        <constructor-arg name="engine" ref="dieselEngine"></constructor-arg>
+    </bean>
+    <bean name="X4" class="com.example.spring04032024.BMW">
+        <constructor-arg name="hp" value="550"></constructor-arg>
+        <constructor-arg name="engine" ref="dieselEngine"></constructor-arg>
+    </bean>
+    <bean name="X5" class="com.example.spring04032024.BMW">
+        <constructor-arg name="hp" value="110"></constructor-arg>
+        <constructor-arg name="engine" ref="petrol"></constructor-arg>
+        <property name="name" value="I3"></property>
+    </bean>
+
+</beans>
